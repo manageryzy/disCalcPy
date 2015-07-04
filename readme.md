@@ -1,6 +1,8 @@
 # disCalcPy #
 a distributed calculate framework written in Python for the experiment of neural network
 
+[中文说明](readme-zh_cn.md)
+
 ## Requirements
 
 * Python 2.7 (maybe other version is okey)
