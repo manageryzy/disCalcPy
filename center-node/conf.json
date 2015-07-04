@@ -1,0 +1,10 @@
+{
+	"port":8899,
+	"timeout":3600,
+    "iter": 80,
+    "eta": [ 0.1, 0.2, 0.3 ],
+    "regType": "WD",
+    "WEParaQ": [ 0.5 ,0.6],
+    "SmFun": "Quadratic",
+    "SmPa": [0.5 , 0.7]
+}
