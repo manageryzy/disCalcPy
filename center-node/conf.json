@@ -6,5 +6,6 @@
     "regType": "WD",
     "WEParaQ": [ 0.5 ,0.6],
     "SmFun": "Quadratic",
-    "SmPa": [0.5 , 0.7]
+    "SmPa": [0.5 , 0.7],
+	"lambda":[0.5]
 }

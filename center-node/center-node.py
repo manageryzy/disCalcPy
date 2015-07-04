@@ -11,7 +11,6 @@ import json
 import sys
 import time
 import threading
-import uuid
 import cPickle as pickle  
 
 debug = 1
@@ -36,6 +35,7 @@ class Conf:
         conf.WEParaQ = j['WEParaQ']
         conf.SmFun = j['SmFun']
         conf.SmPa = j['SmPa']
+        conf.lmbda = j['lambda']
 
         conf.port = j['port']
         conf.timeout = j['timeout']
@@ -47,14 +47,16 @@ class Work:
         for eta in Config.eta:
             for WEParaQ in Config.WEParaQ:
                 for SmPa in Config.SmPa:
-                    work = Work()
-                    work.eta = eta
-                    work.WEParaQ = WEParaQ
-                    work.SmPa = SmPa
-                    work.iter = Config.iter
-                    work.regType = Config.regType
-                    work.SmFum = Config.SmFun
-                    WorkQueue.append(work)
+                    for lmbda in Config.lmbda:
+                        work = Work()
+                        work.eta = eta
+                        work.WEParaQ = WEParaQ
+                        work.SmPa = SmPa
+                        work.lmbda = lmbda
+                        work.iter = Config.iter
+                        work.regType = Config.regType
+                        work.SmFun = Config.SmFun
+                        WorkQueue.append(work)
         return
 
 class WatchThread(threading.Thread):
@@ -120,7 +122,8 @@ while 1:
     line=clientfile.readline().strip()
     if line=='worker ping':
         uuid=clientfile.readline().strip()
-        clientfile.write('server ping')
+        print uuid
+        clientfile.write('server ping\n')
         if(WorkerNodes.get(uuid) == None):
             
             print 'worker ',uuid ,' at ',clientaddr,' connected'
@@ -128,7 +131,7 @@ while 1:
             line = clientfile.readline().strip()
             if line=='ok':
                 if(len(WorkQueue)==0):
-                    clientfile.write('null')
+                    clientfile.write('null\n')
                     line = clientfile.readline().strip()
                     if (line!='ok'):
                         print 'petrol error! connection to ',clientaddr,' closed!!!'
@@ -138,6 +141,7 @@ while 1:
                     WorkingQueue.append(work)
 
                     obj = pickle.dumps(work)
+                    clientfile.write(str(len(obj))+'\n')
                     clientfile.write(obj)
 
                     WorkerNodes[uuid] = {}
@@ -148,14 +152,17 @@ while 1:
                         print 'petrol error! connection to ',clientaddr,' closed!!!'
         else:
             WorkerNodes[uuid]['last_active'] = time.time()
+            line = clientfile.readline().strip()
+            clientfile.write('null\n')
+            line = clientfile.readline().strip()
     else:
         if(line=='worker finish'):
-            clientfile.write('server ping')
+            clientfile.write('server ping\n')
             uuid = clientfile.readline().strip()
             size = int(clientfile.readline().strip())
             res = clientfile.read(size)
 
-            if(WorkerNodes[uuid] == None):
+            if(WorkerNodes.get(uuid) == None):
                 print 'result from unknown node ',uuid,' ignore!'
 
             else:
@@ -170,7 +177,7 @@ while 1:
                 f = file(fileName,'w')
                 f.write(res)
                 f.close()
-                clientfile.write('ok')
+                clientfile.write('ok\n')
 
                 print 'worker node:',uuid,' fiished task!Res saved to ',fileName
         else:  
