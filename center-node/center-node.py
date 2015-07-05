@@ -15,6 +15,8 @@ import cPickle as pickle
 
 debug = 1
 
+socket.setdefaulttimeout(20)
+
 WorkerNodes = {}
 
 # maybe it is a stack rather than a queue, do not mind the name
@@ -106,87 +108,101 @@ except socket.error, msg:
     sys.exit(2)
 
 while 1:
-    if(len(WorkQueue)==0&len(WorkingQueue)==0):
-        break
+    try:
+        if(len(WorkQueue)==0&len(WorkingQueue)==0):
+            break
 
-    clientsock,clientaddr=s.accept()
-    clientfile=clientsock.makefile('rw',0)
+        clientsock,clientaddr=s.accept()
+        clientfile=clientsock.makefile('rw',0)
 
-    print clientaddr[0]
+        print clientaddr[0]
 
-    cleanWorker()
+        cleanWorker()
 
-    if(debug):
-        print 'client ',clientaddr,' connect'
-    
-    line=clientfile.readline().strip()
-    if line=='worker ping':
-        uuid=clientfile.readline().strip()
-        print uuid
-        clientfile.write('server ping\n')
-        if(WorkerNodes.get(uuid) == None):
-            
-            print 'worker ',uuid ,' at ',clientaddr,' connected'
-            
-            line = clientfile.readline().strip()
-            if line=='ok':
-                if(len(WorkQueue)==0):
-                    clientfile.write('null\n')
-                    line = clientfile.readline().strip()
-                    if (line!='ok'):
-                        print 'petrol error! connection to ',clientaddr,' closed!!!'
-                else:
-                    work = WorkQueue.pop()
-                    work.node = uuid
-                    WorkingQueue.append(work)
-
-                    obj = pickle.dumps(work)
-                    clientfile.write(str(len(obj))+'\n')
-                    clientfile.write(obj)
-
-                    WorkerNodes[uuid] = {}
-                    WorkerNodes[uuid]['last_active'] = time.time()
-
-                    line = clientfile.readline().strip()
-                    if (line!='ok'):
-                        print 'petrol error! connection to ',clientaddr,' closed!!!'
-        else:
-            WorkerNodes[uuid]['last_active'] = time.time()
-            line = clientfile.readline().strip()
-            clientfile.write('null\n')
-            line = clientfile.readline().strip()
-    else:
-        if(line=='worker finish'):
-            clientfile.write('server ping\n')
-            uuid = clientfile.readline().strip()
-            size = int(clientfile.readline().strip())
-            res = clientfile.read(size)
-
-            if(WorkerNodes.get(uuid) == None):
-                print 'result from unknown node ',uuid,' ignore!'
-
-            else:
-                del WorkerNodes[uuid]
-                for w in xrange(len(WorkingQueue)):
-                    if(WorkingQueue[w].node == uuid):
-                        WorkFinishedQueue.append(WorkingQueue[w])
-                        del WorkingQueue[w]
-                        break
-
-                fileName = './res/' + str(time.time()) + '.res'
-                f = file(fileName,'w')
-                f.write(res)
-                f.close()
-                clientfile.write('ok\n')
-
-                print 'worker node:',uuid,' fiished task!Res saved to ',fileName
-        else:  
-            print 'petrol error! connection to ',clientaddr,' closed!!!'
-
-    clientfile.close()
-    clientsock.close()
+        if(debug):
+            print 'client ',clientaddr,' connect'
         
-    if(debug):
-        print 'connection to ',clientaddr,' closed'
+        line=clientfile.readline().strip()
+        if line=='worker ping':
+            uuid=clientfile.readline().strip()
+            print uuid
+            clientfile.write('server ping\n')
+            if(WorkerNodes.get(uuid) == None):
+                
+                print 'worker ',uuid ,' at ',clientaddr,' connected'
+                
+                line = clientfile.readline().strip()
+                if line=='ok':
+                    if(len(WorkQueue)==0):
+                        clientfile.write('null\n')
+                        line = clientfile.readline().strip()
+                        if (line!='ok'):
+                            print 'petrol error! connection to ',clientaddr,' closed!!!'
+                    else:
+                        work = WorkQueue.pop()
+                        work.node = uuid
+                        
+                        obj = pickle.dumps(work)
+                        clientfile.write(str(len(obj))+'\n')
+                        clientfile.write(obj)
+
+                        line = clientfile.readline().strip()
+                        if(line == 'busy'):
+                            print '[Error]: client is busy!'
+                            continue
+
+                        WorkerNodes[uuid] = {}
+                        WorkerNodes[uuid]['last_active'] = time.time()
+                        WorkingQueue.append(work)
+
+                        
+                        if (line!='ok'):
+                            print 'petrol error! connection to ',clientaddr,' closed!!!'
+            else:
+                WorkerNodes[uuid]['last_active'] = time.time()
+                line = clientfile.readline().strip()
+                clientfile.write('null\n')
+                line = clientfile.readline().strip()
+        else:
+            if(line=='worker finish'):
+                clientfile.write('server ping\n')
+                uuid = clientfile.readline().strip()
+                size = int(clientfile.readline().strip())
+                res = clientfile.read(size)
+
+                if(WorkerNodes.get(uuid) == None):
+                    print 'result from unknown node ',uuid,' ignore!'
+
+                else:
+                    del WorkerNodes[uuid]
+                    for w in xrange(len(WorkingQueue)):
+                        if(WorkingQueue[w].node == uuid):
+                            WorkFinishedQueue.append(WorkingQueue[w])
+                            del WorkingQueue[w]
+                            break
+
+                    fileName = './res/' + str(time.time()) + '.res'
+                    f = file(fileName,'w')
+                    f.write(res)
+                    f.close()
+                    clientfile.write('ok\n')
+
+                    print 'worker node:',uuid,' fiished task!Res saved to ',fileName
+            else:  
+                print 'petrol error! connection to ',clientaddr,' closed!!!'
+
+        clientfile.close()
+        clientsock.close()
+            
+        if(debug):
+            print 'connection to ',clientaddr,' closed'
+    except socket.error, msg:
+        print '[ERROR] error in change data with client'
+    finally:
+        try:
+            clientfile.close()
+            clientsock.close()
+        except :
+            print '[ERROR] error in change data with client!!!'
 
 print 'all works done'

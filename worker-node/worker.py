@@ -19,6 +19,8 @@ import cPickle as pickle
 
 sys.path.append('./require/mnist/src')
 
+socket.setdefaulttimeout(20)
+
 import mnist_loader
 import network2
 
@@ -94,70 +96,76 @@ while 1:
         s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         s.connect((Config.ip,Config.port))
     except socket.error, msg:
-        sys.stderr.write("[ERROR] %s %s retry in 60s later\n" % msg[0] % msg[1])
+        sys.stderr.write("[ERROR] %s\n" % msg[1])
+        print 'retry in 60s'
         time.sleep(60)
         continue
-    
-    serverfile = s.makefile('rw',0)
-    
-    if(~calcThread.thread.is_alive() & calcThread.calcFinish):
-        #send the finish package
-        serverfile.write('worker finish\n')
-        line = serverfile.readline().strip()
-        if(debug):
-            print line
-        if(line != 'server ping'):
-            print 'petrol error'
-            sys.exit(-1)
-        serverfile.write(UUID + '\n')
 
-        obj = pickle.dumps(calcThread.net)
-        serverfile.write(str(len(obj))+'\n')
-        serverfile.write(obj)
-        calcThread.refresh()
-
-        line = serverfile.readline().strip()
-        if(debug):
-            print line
-        if(line != 'ok'):
-            print 'petrol error'
-            sys.exit(-1)
-    else:
-        #heart beat ping and request for work
-        serverfile.write('worker ping\n')
-        serverfile.write(UUID+'\n')
-        line = serverfile.readline().strip()
-        if(debug):
-            print line
-        if(line != 'server ping'):
-            print 'wrong server',line
-            sys.exit(-1)
-        serverfile.write('ok\n')
-        line = serverfile.readline().strip()
-        if(debug):
-            print line
-        if(line == 'null'):
-            serverfile.write('ok\n')
-        else:
-            obj = serverfile.read(int(line))
-            work = pickle.loads(obj)
-            Config.eta = work.eta
-            Config.WEParaQ = work.WEParaQ
-            Config.SmPa = work.SmPa
-            Config.lmbda = work.lmbda
-            Config.iter = work.iter
-            Config.regType = work.regType
-            Config.SmFun = work.SmFun
-
-            if(calcThread.thread.is_alive()):
-                print 'error:the worker thread is busy!'
-                sys.exit(-1)
-
-            calcThread.thread.start()
-            serverfile.write('ok\n')
-
-    serverfile.close()
-    s.shutdown(socket.SHUT_RDWR)
-    time.sleep(5)
-    
+    try:
+        serverfile = s.makefile('rw',0)
         
+        if(~calcThread.thread.is_alive() & calcThread.calcFinish):
+            #send the finish package
+            serverfile.write('worker finish\n')
+            line = serverfile.readline().strip()
+            if(debug):
+                print line
+            if(line != 'server ping'):
+                print 'petrol error'
+                continue
+            serverfile.write(UUID + '\n')
+
+            obj = pickle.dumps(calcThread.net)
+            serverfile.write(str(len(obj))+'\n')
+            serverfile.write(obj)
+            calcThread.refresh()
+
+            line = serverfile.readline().strip()
+            if(debug):
+                print line
+            if(line != 'ok'):
+                print 'petrol error'
+                continue
+        else:
+            #heart beat ping and request for work
+            serverfile.write('worker ping\n')
+            serverfile.write(UUID+'\n')
+            line = serverfile.readline().strip()
+            if(debug):
+                print line
+            if(line != 'server ping'):
+                print 'wrong server',line
+                sys.exit(-1)
+            serverfile.write('ok\n')
+            line = serverfile.readline().strip()
+            if(debug):
+                print line
+            if(line == 'null'):
+                serverfile.write('ok\n')
+            else:
+                obj = serverfile.read(int(line))
+                work = pickle.loads(obj)
+                Config.eta = work.eta
+                Config.WEParaQ = work.WEParaQ
+                Config.SmPa = work.SmPa
+                Config.lmbda = work.lmbda
+                Config.iter = work.iter
+                Config.regType = work.regType
+                Config.SmFun = work.SmFun
+
+                if(calcThread.thread.is_alive()):
+                    print 'error:the worker thread is busy!'
+                    serverfile.write('busy\n')
+                else:
+                    calcThread.thread.start()
+                serverfile.write('ok\n')
+
+        serverfile.close()
+        s.shutdown(socket.SHUT_RDWR)
+        time.sleep(5)
+    
+    except socket.error, msg:
+        sys.stderr.write("[ERROR] %s\n" % msg[1])
+        print 'retry in 60s'
+        time.sleep(60)
+        continue
