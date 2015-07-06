@@ -13,7 +13,7 @@ import time
 import threading
 import cPickle as pickle  
 
-debug = 1
+debug = 0
 
 socket.setdefaulttimeout(20)
 
@@ -67,8 +67,9 @@ class WatchThread(threading.Thread):
     def run(self):
         print 'monitor thread run!'
         while 1:
-            if(len(WorkQueue)==0&len(WorkingQueue)==0):
-                break
+            if(len(WorkQueue)==0):
+                if(len(WorkingQueue)==0):
+                    break
             time.sleep(60)
             print len(WorkQueue),' works left'
             print len(WorkingQueue),' works calculating'
@@ -80,7 +81,7 @@ def cleanWorker():
     t = time.time()
     for w in WorkerNodes:
         if(t - WorkerNodes[w]['last_active'] > Config.timeout):
-            for work in xrange(WorkingQueue):
+            for work in xrange(len(WorkingQueue)):
                 if(WorkingQueue[work].node == w):
                     WorkQueue.append(WorkingQueue[work])
                     del WorkingQueue[work]
@@ -109,13 +110,12 @@ except socket.error, msg:
 
 while 1:
     try:
-        if(len(WorkQueue)==0&len(WorkingQueue)==0):
-            break
+        if(len(WorkQueue)==0):
+            if(len(WorkingQueue)==0):
+                break
 
         clientsock,clientaddr=s.accept()
         clientfile=clientsock.makefile('rw',0)
-
-        print clientaddr[0]
 
         cleanWorker()
 
@@ -125,11 +125,12 @@ while 1:
         line=clientfile.readline().strip()
         if line=='worker ping':
             uuid=clientfile.readline().strip()
-            print uuid
+            if(debug):
+                print uuid
             clientfile.write('server ping\n')
             if(WorkerNodes.get(uuid) == None):
-                
-                print 'worker ',uuid ,' at ',clientaddr,' connected'
+                if(debug):
+                    print 'worker ',uuid ,' at ',clientaddr,' connected'
                 
                 line = clientfile.readline().strip()
                 if line=='ok':
@@ -148,6 +149,7 @@ while 1:
 
                         line = clientfile.readline().strip()
                         if(line == 'busy'):
+                            WorkQueue.append(work)
                             print '[Error]: client is busy!'
                             continue
 

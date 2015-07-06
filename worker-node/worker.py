@@ -162,7 +162,7 @@ while 1:
 
         serverfile.close()
         s.shutdown(socket.SHUT_RDWR)
-        time.sleep(5)
+        time.sleep(60)
     
     except socket.error, msg:
         sys.stderr.write("[ERROR] %s\n" % msg[1])
