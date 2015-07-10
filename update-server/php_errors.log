@@ -1,0 +1,340 @@
+[10-Jul-2015 11:29:55 Asia/Shanghai] PHP Notice:  Use of undefined constant IN_SERVER - assumed 'IN_SERVER' in D:\git\disCalcPy\update-server\api.php on line 2
+[10-Jul-2015 11:29:55 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:29:55 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP Notice:  Use of undefined constant IN_SERVER - assumed 'IN_SERVER' in D:\git\disCalcPy\update-server\api.php on line 2
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP Warning:  define() expects at least 2 parameters, 1 given in D:\git\disCalcPy\update-server\api.php on line 2
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP   2. define() D:\git\disCalcPy\update-server\api.php:2
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP Notice:  Use of undefined constant IN_SERVER - assumed 'IN_SERVER' in D:\git\disCalcPy\update-server\mysql.inc.php on line 2
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:30:23 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:4
+[10-Jul-2015 11:30:31 Asia/Shanghai] PHP Notice:  Use of undefined constant IN_SERVER - assumed 'IN_SERVER' in D:\git\disCalcPy\update-server\api.php on line 2
+[10-Jul-2015 11:30:31 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:30:31 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP Notice:  Use of undefined constant IN_SERVER - assumed 'IN_SERVER' in D:\git\disCalcPy\update-server\api.php on line 2
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP Notice:  Use of undefined constant DB_ADDR - assumed 'DB_ADDR' in D:\git\disCalcPy\update-server\mysql.inc.php on line 7
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:4
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP Notice:  Use of undefined constant DB_USER - assumed 'DB_USER' in D:\git\disCalcPy\update-server\mysql.inc.php on line 8
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:4
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP Notice:  Use of undefined constant DB_PWD - assumed 'DB_PWD' in D:\git\disCalcPy\update-server\mysql.inc.php on line 9
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:31:46 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:4
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP Notice:  Use of undefined constant DB_ADDR - assumed 'DB_ADDR' in D:\git\disCalcPy\update-server\mysql.inc.php on line 7
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:4
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP Notice:  Use of undefined constant DB_USER - assumed 'DB_USER' in D:\git\disCalcPy\update-server\mysql.inc.php on line 8
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:4
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP Notice:  Use of undefined constant DB_PWD - assumed 'DB_PWD' in D:\git\disCalcPy\update-server\mysql.inc.php on line 9
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:32:08 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:4
+[10-Jul-2015 11:32:49 Asia/Shanghai] PHP Fatal error:  Call to undefined function regApiRouter() in D:\git\disCalcPy\update-server\api.php on line 13
+[10-Jul-2015 11:32:49 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:32:49 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:37:21 Asia/Shanghai] PHP Fatal error:  Call to undefined function onNodeReg() in D:\git\disCalcPy\update-server\core.php on line 37
+[10-Jul-2015 11:37:21 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 11:37:21 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 11:37:21 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 12:49:25 Asia/Shanghai] PHP Fatal error:  Call to undefined function node::onNodeReg() in D:\git\disCalcPy\update-server\core.php on line 37
+[10-Jul-2015 12:49:25 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 12:49:25 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 12:49:25 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 12:51:43 Asia/Shanghai] PHP Fatal error:  Call to undefined function onNodeReg() in D:\git\disCalcPy\update-server\src\core.php on line 41
+[10-Jul-2015 12:51:43 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 12:51:43 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 12:51:43 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 12:53:51 Asia/Shanghai] PHP Fatal error:  Call to undefined function onNodeReg() in D:\git\disCalcPy\update-server\src\core.php on line 43
+[10-Jul-2015 12:53:51 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 12:53:51 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 12:53:51 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 12:53:56 Asia/Shanghai] PHP Warning:  require(helper/helper_loadclass.pp): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\core.php on line 7
+[10-Jul-2015 12:53:56 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 12:53:56 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 12:53:56 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:5
+[10-Jul-2015 12:53:56 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required 'helper/helper_loadclass.pp' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\core.php on line 7
+[10-Jul-2015 12:53:56 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 12:53:56 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 12:53:56 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:5
+[10-Jul-2015 12:59:35 Asia/Shanghai] PHP Warning:  require(helper/helper_loadclass.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\core.php on line 7
+[10-Jul-2015 12:59:35 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 12:59:35 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 12:59:35 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:5
+[10-Jul-2015 12:59:35 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required 'helper/helper_loadclass.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\core.php on line 7
+[10-Jul-2015 12:59:35 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 12:59:35 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 12:59:35 Asia/Shanghai] PHP   2. require_once() D:\git\disCalcPy\update-server\api.php:5
+[10-Jul-2015 12:59:52 Asia/Shanghai] PHP Fatal error:  Call to undefined function onNodeReg() in D:\git\disCalcPy\update-server\src\core.php on line 43
+[10-Jul-2015 12:59:52 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 12:59:52 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 12:59:52 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:34:33 Asia/Shanghai] PHP Fatal error:  Call to undefined function getPackageArray() in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 46
+[10-Jul-2015 14:34:33 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:34:33 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:34:33 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:34:33 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:34:33 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:65
+[10-Jul-2015 14:36:20 Asia/Shanghai] PHP Fatal error:  Call to undefined function getPackageArray() in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 46
+[10-Jul-2015 14:36:20 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:36:20 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:36:20 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:36:20 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:36:20 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:37:24 Asia/Shanghai] PHP Warning:  explode() expects parameter 2 to be string, array given in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 41
+[10-Jul-2015 14:37:24 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:37:24 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:37:24 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:37:24 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:37:24 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:37:24 Asia/Shanghai] PHP   5. loadclass_helper::getPackageArray() D:\git\disCalcPy\update-server\src\helper\loadclass.php:46
+[10-Jul-2015 14:37:24 Asia/Shanghai] PHP   6. explode() D:\git\disCalcPy\update-server\src\helper\loadclass.php:41
+[10-Jul-2015 14:37:24 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'Exception' with message '0' in D:\git\disCalcPy\update-server\src\helper\loadclass.php:19
+Stack trace:
+#0 D:\git\disCalcPy\update-server\src\helper\loadclass.php(47): loadclass_helper::getClassName(NULL)
+#1 D:\git\disCalcPy\update-server\src\helper\loadclass.php(70): loadclass_helper::_newObj('onNodeReg')
+#2 D:\git\disCalcPy\update-server\src\core.php(43): loadclass_helper::factory('onNodeReg')
+#3 D:\git\disCalcPy\update-server\api.php(11): Core->dispatch()
+#4 {main}
+  thrown in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 19
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP Notice:  Array to string conversion in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 32
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   5. loadclass_helper::getClassPath() D:\git\disCalcPy\update-server\src\helper\loadclass.php:51
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP Notice:  Array to string conversion in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 32
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   5. loadclass_helper::getClassPath() D:\git\disCalcPy\update-server\src\helper\loadclass.php:51
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP Warning:  require(./src/Array/Array.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 51
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/Array/Array.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 51
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:38:44 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Notice:  Use of undefined constant i - assumed 'i' in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 32
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   5. loadclass_helper::getClassPath() D:\git\disCalcPy\update-server\src\helper\loadclass.php:51
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Notice:  Undefined index: i in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 32
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   5. loadclass_helper::getClassPath() D:\git\disCalcPy\update-server\src\helper\loadclass.php:51
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Notice:  Use of undefined constant i - assumed 'i' in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 32
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   5. loadclass_helper::getClassPath() D:\git\disCalcPy\update-server\src\helper\loadclass.php:51
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Notice:  Undefined index: i in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 32
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   5. loadclass_helper::getClassPath() D:\git\disCalcPy\update-server\src\helper\loadclass.php:51
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Warning:  require(./src//.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 51
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src//.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 51
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:39:16 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP Notice:  Undefined offset: 1 in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 32
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   5. loadclass_helper::getClassPath() D:\git\disCalcPy\update-server\src\helper\loadclass.php:51
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP Warning:  require(./src//onNodeReg.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 51
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src//onNodeReg.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 51
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:39:28 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP Warning:  require(./src/onNodeReg.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 51
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/onNodeReg.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 51
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:40:15 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:43:23 Asia/Shanghai] PHP Fatal error:  Class 'onNodeReg' not found in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 55
+[10-Jul-2015 14:43:23 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:43:23 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:43:23 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:43:23 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:43:23 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:70
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP Warning:  require(./src/onnodereg.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/onnodereg.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:46:34 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP Warning:  require(./src/onnodereg.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/onnodereg.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:53:48 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:53:52 Asia/Shanghai] PHP Warning:  require(./src/onnodereg.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:53:52 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:53:53 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:53:53 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:53:53 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:53:53 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:53:53 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/onnodereg.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:53:53 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:53:53 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:53:53 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:53:53 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:53:53 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP Warning:  require(./src/a-b-c@asdf.onnodegettingcommand.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/a-b-c@asdf.onnodegettingcommand.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:54:00 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP Warning:  require(./src/c@asdf.onnodegettingcommand/b/a.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/c@asdf.onnodegettingcommand/b/a.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:54:25 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP Warning:  require(./src/@.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/@.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:57:23 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP Warning:  require(./src/a.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/a.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:57:47 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:58:43 Asia/Shanghai] PHP Warning:  require(./src/a.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/a.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:58:44 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP Warning:  require(./src/a.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 59
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:78
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/a.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 59
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:59:05 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:78
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP Warning:  require(./src/c/b/a.php): failed to open stream: No such file or directory in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required './src/c/b/a.php' (include_path='.;C:\php\pear') in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 58
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 14:59:34 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77
+[10-Jul-2015 15:00:07 Asia/Shanghai] PHP Fatal error:  Class 'c_b_a' not found in D:\git\disCalcPy\update-server\src\helper\loadclass.php on line 62
+[10-Jul-2015 15:00:07 Asia/Shanghai] PHP Stack trace:
+[10-Jul-2015 15:00:07 Asia/Shanghai] PHP   1. {main}() D:\git\disCalcPy\update-server\api.php:0
+[10-Jul-2015 15:00:07 Asia/Shanghai] PHP   2. Core->dispatch() D:\git\disCalcPy\update-server\api.php:11
+[10-Jul-2015 15:00:07 Asia/Shanghai] PHP   3. loadclass_helper::factory() D:\git\disCalcPy\update-server\src\core.php:43
+[10-Jul-2015 15:00:07 Asia/Shanghai] PHP   4. loadclass_helper::_newObj() D:\git\disCalcPy\update-server\src\helper\loadclass.php:77

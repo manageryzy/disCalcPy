@@ -86,7 +86,7 @@ def cleanWorker():
                     WorkQueue.append(WorkingQueue[work])
                     del WorkingQueue[work]
                     break
-            del WorkerNode[w]
+            del WorkerNodes[w]
 
 
 Config = Conf.loadConf()

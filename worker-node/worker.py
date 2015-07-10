@@ -71,6 +71,9 @@ class CalcThread(object):
         self.net.WEParaQ = Config.WEParaQ
         self.net.SmFun = Config.SmFun
         self.net.SmPa = Config.SmPa
+        self.net.iter = Config.iter
+        self.net.eta = Config.eta
+        self.net.lmbda = Config.lmbda
 
         evaluation_cost, evaluation_accuracy, \
         training_cost, training_accuracy = \
