@@ -79,6 +79,7 @@ class WatchThread(threading.Thread):
 #clean the worker nodes do not send heart beat ping package
 def cleanWorker():
     t = time.time()
+    dellist = []
     for w in WorkerNodes:
         if(t - WorkerNodes[w]['last_active'] > Config.timeout):
             for work in xrange(len(WorkingQueue)):
@@ -86,7 +87,11 @@ def cleanWorker():
                     WorkQueue.append(WorkingQueue[work])
                     del WorkingQueue[work]
                     break
-            del WorkerNodes[w]
+            dellist.append(w)
+    for w in dellist:
+        print w
+        print dellist
+        del WorkerNodes[w]
 
 
 Config = Conf.loadConf()
@@ -105,7 +110,8 @@ try:
     s.bind(('',Config.port))
     s.listen(10)
 except socket.error, msg:
-    sys.stderr.write("[ERROR] %s\n" % msg[1])
+    sys.stderr.write("[ERROR] %s\n" )
+    print msg
     sys.exit(2)
 
 while 1:
@@ -200,6 +206,7 @@ while 1:
             print 'connection to ',clientaddr,' closed'
     except socket.error, msg:
         print '[ERROR] error in change data with client'
+        print msg
     finally:
         try:
             clientfile.close()

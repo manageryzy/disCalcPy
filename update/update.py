@@ -1,4 +1,4 @@
-import os,sys
+import os,sys,time,random
 import httplib, urllib
 import shutil
 
@@ -26,7 +26,7 @@ def downloadToFile(remote_path,path):
         return False;
 
     try:
-        fw = open(path,'w')
+        fw = open(path,'wb')
         fw.write(data)
         fw.close()
     except:
@@ -81,7 +81,13 @@ def UpdateCommand():
     return True
 
 while 1:
+    sleeptime = random.randint(10,600)
+    print sleeptime
+    time.sleep(sleeptime)
+    print 'downloading'
     if(update()):
         break
 
-
+print 'run'
+os.chdir('./worker')
+os.system('python monitor.py')

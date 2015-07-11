@@ -2,3 +2,6 @@
 !*.gitignore
 *.res
 *.csv
+*.log
+*.net
+/update/worker/*
