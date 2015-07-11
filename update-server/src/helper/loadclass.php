@@ -8,24 +8,15 @@
 	
 	class loadclass_helper{
 		//已经加载的类
-		protected static $_loaded_class = array('core');
+		protected static $_loaded_class = array('core','loadclass_helper');
 		
 		//已经加载的对象
 		protected static $_obj_pool = array();
 		
-		//从包数组获得类名
-		static function getClassName($packageArray){
-			if(sizeof($packageArray) == 0)
-				throw new Exception('object packageArray :' + print_r($packageArray,true) + ' is not acceptable');
-				
-			$res = '';
-			
-			for($i = sizeof($packageArray)-1;$i>0;$i--){
-				$res = $res.$packageArray[$i].'_';
-			}
-
-			return $res.$packageArray[0];
+		static function init(){
+			self::loadClass('Widget');
 		}
+	
 		
 		//从包数组获得包路径
 		static function getClassPath($packageArray){
@@ -50,13 +41,8 @@
  		//对象池中没有对象就在这里创建
  		protected static function _newObj($objString){
 			$className = substr($objString,0,strpos($objString,'@'));
-			$packageArray = self::getPackageArray($objString);
-			 
-			//检测文件是否被加载过，如果没加载则读入
-			if(!isset(self::$_loaded_class[$className])){
-				require(self::getClassPath($packageArray));
-				$_loaded_class[$className] = true; 
-			}
+			
+			self::loadClass($className);
 			 
 			$obj = new $className($objString);
 			
@@ -68,10 +54,21 @@
 			return $obj;
 		}
 		
+		static function loadClass($className){
+			$packageArray = self::getPackageArray($className);
+			 
+			//检测文件是否被加载过，如果没加载则读入
+			if(!isset(self::$_loaded_class[$className])){
+				require(self::getClassPath($packageArray));
+				$_loaded_class[$className] = true; 
+			}
+		}
+		
 		//工厂方法
+		//参数形式：<class name>@<parmeter>
 		static function factory($objString){
 			if(isset(self::$_obj_pool[$objString])){
-				return self::$_obj_pool[$objString];
+					return self::$_obj_pool[$objString];	
 			}else{
 				return self::_newObj($objString);
 			}

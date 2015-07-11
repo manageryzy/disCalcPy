@@ -14,15 +14,17 @@
 				echo 'Database not inited!';
 				die;
 			}
+			
+			loadclass_helper::init();
 		}
 		
 		//注册API应用程序的路由
 		function regApiRouter(){
 			$this->router = array(
 				//注册计算节点，只是方便管理和统计
-				'reg' => 'onNodeReg',
-				//计算节点的升级程序获得
-				'getCommand' => 'a_b_c@asdf.onNodeGettingCommand',
+				'reg' => 'reg_api_slave_widget@',
+				//计算节点的主控程序获得控制信息
+				'getCommand' => 'getCommand_api_slave_widget@',
 			);
 		}
 		
