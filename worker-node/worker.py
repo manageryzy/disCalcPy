@@ -99,7 +99,8 @@ while 1:
         s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         s.connect((Config.ip,Config.port))
     except socket.error, msg:
-        sys.stderr.write("[ERROR] %s\n" % msg[1])
+        print 'error'
+        print msg
         print 'retry in 60s'
         time.sleep(60)
         continue
@@ -131,8 +132,7 @@ while 1:
                 continue
         else:
             #heart beat ping and request for work
-            serverfile.write('worker ping\n')
-            serverfile.write(UUID+'\n')
+            serverfile.write('worker ping\n'+UUID+'\n')
             line = serverfile.readline().strip()
             if(debug):
                 print line
@@ -147,14 +147,14 @@ while 1:
                 serverfile.write('ok\n')
             else:
                 obj = serverfile.read(int(line))
-                work = pickle.loads(obj)
-                Config.eta = work.eta
-                Config.WEParaQ = work.WEParaQ
-                Config.SmPa = work.SmPa
-                Config.lmbda = work.lmbda
-                Config.iter = work.iter
-                Config.regType = work.regType
-                Config.SmFun = work.SmFun
+                work = json.loads(obj)
+                Config.eta = work['eta']
+                Config.WEParaQ = work['WEParaQ']
+                Config.SmPa = work['SmPa']
+                Config.lmbda = work['lmbda']
+                Config.iter = work['iter']
+                Config.regType = work['regType']
+                Config.SmFun = work['SmFun']
 
                 if(calcThread.thread.is_alive()):
                     print 'error:the worker thread is busy!'
@@ -168,7 +168,8 @@ while 1:
         time.sleep(60)
     
     except socket.error, msg:
-        sys.stderr.write("[ERROR] %s\n" % msg[1])
+        print 'error'
+        print msg
         print 'retry in 60s'
         time.sleep(60)
         continue
