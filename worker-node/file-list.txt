@@ -2,6 +2,7 @@
 /file-list.txt
 /init.net
 /monitor.py
+/shut.bat
 /worker.py
 /require/readme.md
 /require/mnist/README.md

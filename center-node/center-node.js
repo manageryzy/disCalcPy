@@ -4,6 +4,7 @@ var readline = require('readline');
 
 var conf,tasks = [],taskCalc = [],nodes;
 
+taskCalc['len'] = 0;
 
 var deepCopy = function (source) {
   var result = {};
@@ -47,9 +48,10 @@ var Nodes = function(){
     for(var UUID in nodeMap){
       if((Date.now() - nodeMap[UUID].active)>conf.timeout){
         if(typeof(taskCalc[UUID])!='undefined'){
+          console.log('released a tast at ' + UUID + ' @ ' + nodeMap[UUID].ip + ' last active ' + nodeMap[UUID].active);  
           tasks.push(taskCalc[UUID]);
-          taskCalc.splice(UUID, 1);       
-          console.log('released a tast at ' + UUID + ' @ ' + nodeMap[UUID].ip);  
+          taskCalc.splice(UUID, 1);    
+          taskCalc['len']=taskCalc['len']+1;   
         }
       }
     }
@@ -97,7 +99,7 @@ chatServer.on('connection', function(socket) {
   var uuid;
   var bufferLength,recvLength = 0;
   // var theBuffer = new Buffer('');
-  var fileName = './res/'+(Date.now() / 1000)+'.res';
+  var fileName = './res/'+(Date.now() / 1000) + '-' + Math.round(Math.random()*10000) +'.res';
   
   var deal = {
     '0':{
@@ -120,6 +122,7 @@ chatServer.on('connection', function(socket) {
         else{
           var obj = tasks.pop();
           taskCalc[uuid] = obj;
+          taskCalc['len']=taskCalc['len']+1;
           var json = JSON.stringify(obj);
           socket.write(json.length + '\n');
           socket.write(json);
@@ -164,7 +167,7 @@ chatServer.on('connection', function(socket) {
     }
     else if(mode == 3){
       bufferLength = parseInt(buffer.toString());
-      console.log(buffer.toString())
+      //console.log(buffer.toString())
       mode = 4  
     }
     else if(mode == 4){
@@ -178,6 +181,7 @@ chatServer.on('connection', function(socket) {
         console.log('uuid: '+ uuid + ' @ ' + ip +' calc finished');
         taskCalc[uuid] = undefined;
         taskCalc.splice(uuid, 1);  
+        taskCalc['len']=taskCalc['len']-1;
       }
     }
   });
@@ -240,7 +244,7 @@ var monitor = function(){
   console.log('*************************');
   console.log(new Date().toLocaleString());
   console.log(tasks.length + ' tasks left!');
-  console.log(taskCalc.length + ' tasks calculating!');
+  console.log(taskCalc['len'] + ' tasks calculating!');
   console.log(nodes.length() + ' nodes known');
   console.log(nodes.liveCount() + ' nodes is alive');
   console.log(nodes.workingCount() + ' nodes is working!');
@@ -271,6 +275,7 @@ var rl = readline.createInterface({
 console.log('type help to get help!\n');
 
 rl.on('line', function (cmd) {
+  console.log('------------------------\n');
   switch(cmd){
     case 'help':
       console.log('help \t get document');
@@ -290,8 +295,19 @@ rl.on('line', function (cmd) {
       console.log('list of nodes:');
       console.log(nodes.getNode());
     break;
+    case 'monitor':
+      console.log('*************************');
+      console.log(new Date().toLocaleString());
+      console.log(tasks.length + ' tasks left!');
+      console.log(taskCalc['len'] + ' tasks calculating!');
+      console.log(nodes.length() + ' nodes known');
+      console.log(nodes.liveCount() + ' nodes is alive');
+      console.log(nodes.workingCount() + ' nodes is working!');
+      console.log('*************************\n');
+    break;
     default:
       console.log('type help to get help');
     break;
   }
+  console.log('------------------------\n');
 });

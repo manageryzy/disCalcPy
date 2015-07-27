@@ -26,18 +26,20 @@ for parent,dirnames,filenames in os.walk(sys.argv[1]):
         fr = open(parent+'/'+filename,'r')
         obj = fr.read()
         fr.close()
-        net = pickle.loads(obj)
+        try:
+            net = pickle.loads(obj)
 
-        for l in xrange(len(net.weights)):
-            fw = open(sys.argv[2]+'-'+str(l)+'-norm.csv','a+')
-            fw.write('"'+filename+'",')
-            for r in xrange(len(net.weights[l])):
-                norm = np.linalg.norm(net.weights[l][r]);
-                if(norm < 0.1):
-                    count += 1
-                fw.write(str(norm)+',')
-            fw.write('\n')        
-            fw.close()
-
+            for l in xrange(len(net.weights)):
+                fw = open(sys.argv[2]+'-'+str(l)+'-norm.csv','a+')
+                fw.write('"'+filename+'",')
+                for r in xrange(len(net.weights[l])):
+                    norm = np.linalg.norm(net.weights[l][r]);
+                    if(norm < 0.1):
+                        count += 1
+                    fw.write(str(norm)+',')
+                fw.write('\n')        
+                fw.close()
+        except:
+            print 'err'
 print count
             

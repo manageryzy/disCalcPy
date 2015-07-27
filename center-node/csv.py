@@ -50,26 +50,29 @@ for parent,dirnames,filenames in os.walk(sys.argv[1]):
         fr = open(parent+'/'+filename,'r')
         obj = fr.read()
         fr.close()
-        net = pickle.loads(obj)
+        try:
+            net = pickle.loads(obj)
 
-        fw = open(sys.argv[2]+'-training_cost.csv','a+')
-        fw.write('"' + filename + '",' + str(net.training_cost)[1:-1] +'\n')
-        fw.close()
+            fw = open(sys.argv[2]+'-training_cost.csv','a+')
+            fw.write('"' + filename + '",' + str(net.training_cost)[1:-1] +'\n')
+            fw.close()
 
-        fw = open(sys.argv[2]+'-training_accuracy.csv','a+')
-        fw.write('"' + filename + '",' + str(net.training_accuracy)[1:-1] +'\n')
-        fw.close()
+            fw = open(sys.argv[2]+'-training_accuracy.csv','a+')
+            fw.write('"' + filename + '",' + str(net.training_accuracy)[1:-1] +'\n')
+            fw.close()
 
-        fw = open(sys.argv[2]+'-evaluation_cost.csv','a+')
-        fw.write('"' + filename + '",' + str(net.evaluation_cost)[1:-1] +'\n')
-        fw.close()
+            fw = open(sys.argv[2]+'-evaluation_cost.csv','a+')
+            fw.write('"' + filename + '",' + str(net.evaluation_cost)[1:-1] +'\n')
+            fw.close()
 
-        fw = open(sys.argv[2]+'-evaluation_accuracy.csv','a+')
-        fw.write('"' + filename + '",' + str(net.evaluation_accuracy)[1:-1] +'\n')
-        fw.close()
-        
-        fw = open(sys.argv[2]+'-parmeter.csv','a+')
-        fw.write('"' + filename + '",' + str(net.eta) + ',' + str(net.lmbda) + \
-                 ',' + str(net.SmFun) + ',' + str(net.SmPa)  + ','
-                 + str(net.regType) + ',' + str(net.WEParaQ) + '\n')
-        fw.close()
+            fw = open(sys.argv[2]+'-evaluation_accuracy.csv','a+')
+            fw.write('"' + filename + '",' + str(net.evaluation_accuracy)[1:-1] +'\n')
+            fw.close()
+            
+            fw = open(sys.argv[2]+'-parmeter.csv','a+')
+            fw.write('"' + filename + '",' + str(net.eta) + ',' + str(net.lmbda) + \
+                     ',' + str(net.SmFun) + ',' + str(net.SmPa)  + ','
+                     + str(net.regType) + ',' + str(net.WEParaQ) + '\n')
+            fw.close()
+        except:
+            print 'err'

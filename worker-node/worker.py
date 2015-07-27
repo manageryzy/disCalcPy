@@ -122,14 +122,15 @@ while 1:
             obj = pickle.dumps(calcThread.net)
             serverfile.write(str(len(obj))+'\n')
             serverfile.write(obj)
-            calcThread.refresh()
-
+            
             line = serverfile.readline().strip()
             if(debug):
                 print line
             if(line != 'ok'):
                 print 'petrol error'
                 continue
+
+            calcThread.refresh()
         else:
             #heart beat ping and request for work
             serverfile.write('worker ping\n'+UUID+'\n')
