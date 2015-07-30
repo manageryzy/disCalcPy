@@ -9,15 +9,11 @@ a distributed calculate framework written in Python for the experiment of neural
 * numpy
 * scikit-learn(maybe it not nessesary for every neural networks)
 * scipy
+* nodejs or iojs
+* php
+* WebServer ( apache httpd or nginx)
 
-
-##Install
-
-### center node
-
-### worker node
-
-## Packacge format
+** to go to chinese readme to learn more **
 
 ## Licence
 
