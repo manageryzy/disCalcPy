@@ -10,7 +10,6 @@ a distributed calculate framework written in Python for the experiment of neural
 * scikit-learn(maybe it not nessesary for every neural networks)
 * scipy
 * nodejs or iojs
-* php
 * WebServer ( apache httpd or nginx)
 
 ** to go to chinese readme to learn more **
