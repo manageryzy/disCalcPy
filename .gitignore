@@ -4,5 +4,5 @@
 *.csv
 *.log
 *.net
-/center-node/conf/*
+/center-node/tasks/*
 /update/worker/*
