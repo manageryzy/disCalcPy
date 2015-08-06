@@ -99,8 +99,8 @@ class Network():
         layers.
 
         """
-        self.biases = [np.random.randn(y, 1) for y in self.sizes[1:]]
-        self.weights = [np.random.randn(y, x)/np.sqrt(x)
+        self.biases = [np.random.rand(y, 1)-0.5 for y in self.sizes[1:]]
+        self.weights = [np.random.rand(y, x)-0.5
                         for x, y in zip(self.sizes[:-1], self.sizes[1:])]
 
     def large_weight_initializer(self):
