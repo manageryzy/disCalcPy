@@ -88,6 +88,9 @@ class CalcThread(object):
         self.net.evaluation_accuracy = evaluation_accuracy
         self.net.training_cost = training_cost
         self.net.training_accuracy = training_accuracy
+
+        self.net.save('res.net')
+        
         self.calcFinish = True
         print 'Worker thread finish!'
 
