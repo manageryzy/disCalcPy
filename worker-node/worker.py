@@ -19,7 +19,7 @@ import cPickle as pickle
 
 sys.path.append('./require/mnist/src')
 
-socket.setdefaulttimeout(20)
+socket.setdefaulttimeout(1200)
 
 import mnist_loader
 import network2
@@ -77,7 +77,7 @@ class CalcThread(object):
 
         evaluation_cost, evaluation_accuracy, \
         training_cost, training_accuracy = \
-        self.net.SGD(training_data, Config.iter, 50, Config.eta,
+        self.net.SGD(training_data, Config.iter, 1, Config.eta,
                 lmbda = Config.lmbda,
                 evaluation_data=test_data,
                 monitor_evaluation_cost=True,
