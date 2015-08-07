@@ -9,7 +9,6 @@
 /require/mnist/requirements.txt
 /require/mnist/data/mnist.pkl.gz
 /require/mnist/src/calcnorm.py
-/require/mnist/src/calcnorm.pyc
 /require/mnist/src/conv.py
 /require/mnist/src/expand_mnist.py
 /require/mnist/src/launch.py
