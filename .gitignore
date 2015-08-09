@@ -6,3 +6,4 @@
 *.net
 /center-node/conf/*
 /update/worker/*
+/worker-node/file-list.txt
