@@ -6,3 +6,4 @@
 *.net
 /center-node/tasks/*
 /update/worker/*
+/center-node/conf/*
